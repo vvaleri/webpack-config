@@ -5,11 +5,13 @@ module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
     port: 5000,
-    open: true
+    open: true,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin(
